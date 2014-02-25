@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
-current_dir=`pwd`
+current_dir=$(pwd)
+mv ~/.vim ~/.vim-old
+mv ~/.vimrc ~/.vimrc-old
 ln -s $current_dir/dot-vim ~/.vim
 ln -s $current_dir/dot-vimrc ~/.vimrc

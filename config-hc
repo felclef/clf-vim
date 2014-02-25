@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+curl https://codeload.github.com/felclef/clf-vim/zip/master | gunz
