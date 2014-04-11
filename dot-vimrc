@@ -1,6 +1,7 @@
 execute pathogen#infect()
-call pathogen#helptags()
 syntax on
+filetype plugin on
+set nocp
 set number
 set autoindent
 set tabstop=4
@@ -15,8 +16,9 @@ set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 set splitright
 set splitbelow
 
-map cy :w !pbcopy
-map cp :r !pbpaste
+map cy :w!pbcopy<CR><CR>
+map cp :r!pbpaste<CR><CR>
+set clipboard=unnamed
 map } :tabn<CR>
 map { :tabp<CR>
 
@@ -40,5 +42,5 @@ let g:vdebug_options= {
     \    "marker_open_tree" : '▾'
     \}
 let g:vdebug_options["server"] = '33.33.33.1'
-let g:vdebug_options["path_maps"] = {"/vagrant/kanui/trunk": "/Users/clef/inn/kDev/vagrant/kanui/trunk"}
-let g:vdebug_options["continuous_mode"] = 0 
+let g:vdebug_options["continuous_mode"] = 0
+nohl 
